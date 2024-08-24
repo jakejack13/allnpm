@@ -27,6 +27,8 @@ for(let i = 0; i < names.length; i++) {
     } catch (err) {
         console.error(`error with ${name}`)
         delete manifest.dependencies[name];
+        writeFileSync('package.json', JSON.stringify(manifest));
+        continue;
     }
     console.log(`${n}: finish ${name}: ${version}`);
     n++;
