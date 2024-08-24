@@ -13,6 +13,8 @@ jobs:
             node-version: 22
       - name: Install Yarn
         run: npm install --global yarn
+      - name: Yarn install
+        run: yarn install --pure-lockfile
       - name: Update package.json
         run: yarn run start
       - name: Update yarn.lock
