@@ -17,7 +17,7 @@ for(let i = 0; i < names.length; i++) {
         continue;
     }
 
-    let version = '>=0.0.0';
+    let version = '*';
     console.log(`${n}:  start ${name}: ${version}`);
     manifest.dependencies[name] = version;
     writeFileSync('package.json', JSON.stringify(manifest));
