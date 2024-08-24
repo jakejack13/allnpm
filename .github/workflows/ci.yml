@@ -17,5 +17,7 @@ jobs:
             node-version: 22
       - name: Install Yarn
         run: npm install --global yarn
+      - name: Yarn cache clean
+        run: yarn cache clean
       - name: yarn install
         run: yarn install --frozen-lockfile --non-interactive
