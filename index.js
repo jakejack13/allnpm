@@ -17,7 +17,7 @@ for(let i = 0; i < names.length; i++) {
         continue;
     }
 
-    let version = '*';
+    let version = '>=0.0.0';
     console.log(`${n}:  start ${name}: ${version}`);
     manifest.dependencies[name] = version;
     writeFileSync('package.json', JSON.stringify(manifest));
@@ -25,6 +25,7 @@ for(let i = 0; i < names.length; i++) {
         await exec('yarn install');
         await exec('yarn install --frozen-lockfile --non-interactive')
     } catch (err) {
+        console.error(`error with ${name}`)
         delete manifest.dependencies[name];
     }
     console.log(`${n}: finish ${name}: ${version}`);
