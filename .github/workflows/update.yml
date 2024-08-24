@@ -14,12 +14,12 @@ jobs:
       - name: Install Yarn
         run: npm install --global yarn
       - name: Yarn install
-        run: yarn install --pure-lockfile
+        run: yarn install --pure-lockfile --non-interactive
       - name: Update package.json
         run: yarn run start
       - name: Update yarn.lock
-        run: yarn install
-      - name: Commit report
+        run: yarn install --non-interactive
+      - name: Commit files
         run: |
           git config --global user.name 'Jacob Kerr'
           git config --global user.email 'jakejack13@users.noreply.github.com'
