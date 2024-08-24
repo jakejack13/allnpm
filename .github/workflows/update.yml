@@ -15,10 +15,8 @@ jobs:
         run: npm install --global yarn
       - name: Yarn install
         run: yarn install --pure-lockfile --non-interactive
-      - name: Update package.json
+      - name: Update package.json and yarn.lock
         run: yarn run start
-      - name: Update yarn.lock
-        run: yarn install --non-interactive
       - name: Commit files
         run: |
           git config --global user.name 'Jacob Kerr'
