@@ -1,0 +1,25 @@
+name: Sync packages
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set Node.js 22
+        uses: actions/setup-node@v4
+        with:
+            node-version: 22
+      - name: Install Yarn
+        run: npm install --global yarn
+      - name: Update package.json
+        run: yarn run start
+      - name: Update yarn.lock
+        run: yarn install
+      - name: Commit report
+        run: |
+          git config --global user.name 'Jacob Kerr'
+          git config --global user.email 'jakejack13@users.noreply.github.com'
+          git commit -am "Sync packages"
+          git push

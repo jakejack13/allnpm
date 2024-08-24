@@ -1,0 +1,15 @@
+{
+    "name": "allnpm",
+    "version": "1.0.0",
+    "description": "All npm packages",
+    "main": "index.js",
+    "repository": "github.com/jakejack13/allnpm",
+    "author": "Jacob Kerr <jck268@cornell.edu>",
+    "license": "MIT",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "dependencies": {
+        "all-the-package-names":"*"
+    }
+}
