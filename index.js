@@ -18,7 +18,7 @@ for(let i = 0; i < names.length; i++) {
     }
 
     let version = '*';
-    console.log(`n:  start ${name}: ${version}`);
+    console.log(`${n}:  start ${name}: ${version}`);
     manifest.dependencies[name] = version;
     writeFileSync('package.json', JSON.stringify(manifest));
     try {
@@ -26,7 +26,7 @@ for(let i = 0; i < names.length; i++) {
     } catch (err) {
         delete manifest.dependencies[name];
     }
-    console.log(`n: finish ${name}: ${version}`);
+    console.log(`${n}: finish ${name}: ${version}`);
     n++;
 }
 console.log('end');
