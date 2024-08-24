@@ -13,7 +13,7 @@ for(let i = 0; i < names.length; i++) {
     if (n >= NUM_DEPS) break;
 
     let name = names[i];
-    if (Object.keys(manifest.dependencies).findIndex(name) !== -1) {
+    if (Object.keys(manifest.dependencies).includes(name)) {
         continue;
     }
 
