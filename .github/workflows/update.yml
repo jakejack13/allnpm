@@ -20,6 +20,8 @@ jobs:
         run: yarn install --pure-lockfile --non-interactive
       - name: Update package.json and yarn.lock
         run: yarn run start
+      - name: Sanity check
+        run: yarn install --frozen-lockfile --non-interactive
       - name: Commit files
         run: |
           git config --global user.name 'Jacob Kerr'
