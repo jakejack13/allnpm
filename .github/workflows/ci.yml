@@ -18,4 +18,4 @@ jobs:
       - name: Install Yarn
         run: npm install --global yarn
       - name: yarn install
-        run: yarn install --frozen-lockfile
+        run: yarn install --frozen-lockfile --non-interactive

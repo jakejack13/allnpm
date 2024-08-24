@@ -23,6 +23,7 @@ for(let i = 0; i < names.length; i++) {
     writeFileSync('package.json', JSON.stringify(manifest));
     try {
         await exec('yarn install');
+        await exec('yarn install --frozen-lockfile --non-interactive')
     } catch (err) {
         delete manifest.dependencies[name];
     }
