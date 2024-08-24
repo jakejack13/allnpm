@@ -4,14 +4,21 @@ import { promisify } from 'util';
 import childProcess from 'child_process';
 const exec = promisify(childProcess.exec);
 
-
+const NUM_DEPS = 20;
 let manifest = JSON.parse(readFileSync('package.json', 'utf8'));
 
 console.log('start');
+let n = 0;
 for(let i = 0; i < names.length; i++) {
+    if (n >= NUM_DEPS) break;
+
     let name = names[i];
+    if (manifest.dependencies.keys().findIndex(name) !== -1) {
+        continue;
+    }
+
     let version = '*';
-    console.log(`start ${name}: ${version}`);
+    console.log(`n:  start ${name}: ${version}`);
     manifest.dependencies[name] = version;
     writeFileSync('package.json', JSON.stringify(manifest));
     try {
@@ -19,6 +26,7 @@ for(let i = 0; i < names.length; i++) {
     } catch (err) {
         delete manifest.dependencies[name];
     }
-    console.log(`finish ${name}: ${version}`);
+    console.log(`n: finish ${name}: ${version}`);
+    n++;
 }
 console.log('end');
