@@ -1913,9 +1913,9 @@ ajbikang@^1.1.4:
     react-dom "^18"
 
 all-the-package-names@*:
-  version "2.0.1694"
-  resolved "https://registry.yarnpkg.com/all-the-package-names/-/all-the-package-names-2.0.1694.tgz#9f3f1ed1c58af957723444f550b594a96ebfb14c"
-  integrity sha512-9AXR2SsEOwD1+bbHDfHkzDpdQH6kfcwPCoqe3s8YsEPL09G11l/HVJhetS0LQBJ6IK6tw2E6qx5wKe7o3pYxMQ==
+  version "2.0.1698"
+  resolved "https://registry.yarnpkg.com/all-the-package-names/-/all-the-package-names-2.0.1698.tgz#6bf0822eb41d67da54bbb23dc5bad87f56f257e5"
+  integrity sha512-Rkq0DgT7qMIzNdfllW77Lpm9KpmFo3zrGqGZEkFL2RjCG7CMVnL/R+xheHXeIZTlvJr2S1c+4e9XzXv4Hcbg7A==
 
 amacryptses@^1.1.4:
   version "1.1.4"
