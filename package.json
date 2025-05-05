@@ -9,7 +9,7 @@
     "@babel/cli": "^7.27.1",
     "@babel/core": "^7.27.1",
     "@babel/preset-env": "^7.27.1",
-    "@eslint/js": "^9.22.0",
+    "@eslint/js": "^9.26.0",
     "async": "^3.2.6",
     "debug": "^4.4.0",
     "eslint": "^9.25.1",
