@@ -6,7 +6,7 @@
   "author": "Jacob Kerr <jck268@cornell.edu>",
   "license": "MIT",
   "dependencies": {
-    "@babel/cli": "^7.28.3",
+    "@babel/cli": "^7.28.6",
     "@babel/core": "^7.28.6",
     "@babel/preset-env": "^7.28.5",
     "@eslint/js": "^9.28.0",
